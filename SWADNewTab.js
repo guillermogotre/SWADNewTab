@@ -181,6 +181,21 @@ var Base64 = {
 The actual piece of code
 */	
 
+	function addLoading(){
+		$(body).append(`<div id="loading" style="
+    block; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url('http://i.stack.imgur.com/MnyxU.gif');
+    background-repeat: no-repeat;
+    background-position: center;"></div>`)
+	}
+
     let formB64_param = get('form');
     if(formB64_param !== undefined){
         let form_text = Base64.decode(formB64_param);
