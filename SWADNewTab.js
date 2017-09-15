@@ -177,12 +177,14 @@ var Base64 = {
             return decodeURIComponent(name[1]);
     }
 
-/*
-The actual piece of code
-*/	
 
-	function addLoading(){
-		$(body).append(`<div id="loading" style="
+/*
+	Loading div css taken from StackOverflow (https://stackoverflow.com/questions/25253391/javascript-loading-screen-while-page-loads)
+	Attributed to Mr. Polywhirl (https://stackoverflow.com/users/1762224/mr-polywhirl)
+*/
+
+function addLoading(){
+		$('body').append(`<div id="loading" style="
     block; 
     position: absolute;
     top: 0;
@@ -196,8 +198,13 @@ The actual piece of code
     background-position: center;"></div>`)
 	}
 
+/*
+The actual piece of code
+*/	
+
     let formB64_param = get('form');
     if(formB64_param !== undefined){
+    	addLoading();
         let form_text = Base64.decode(formB64_param);
         $('body').append(form_text);
         $('form').last().submit();
