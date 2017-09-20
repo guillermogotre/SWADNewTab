@@ -1,9 +1,8 @@
 // ==UserScript==
 // @name         SWADNewTab
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/guillermogotre/
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @author       Guillermo
 // @match        https://swad.ugr.es/*
 // @grant        none
 // @require      http://code.jquery.com/jquery-3.2.1.min.js
